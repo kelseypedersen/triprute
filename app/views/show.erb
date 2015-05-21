@@ -1,0 +1,11 @@
+<div class="container">
+  <h1><%= @trip.title %></h1>
+  <p><%= @trip.category %></p>
+  <p><%= @trip.season %></p>
+  <p><%= @trip.comments %></p>
+  <p><%= @trip.photo %></p>
+</div>
+
+<form action="/trips/:id/city/new" method="get">
+<input type="submit" value="Add a city!">
+</form>
