@@ -1,3 +1,10 @@
+<script type="text/javascript">
+function visitTrip(){
+    var loc = 'http://localhost:9393/trips/<%=@trip.id%>';
+    console.log(loc);
+    location.href = loc;
+}
+</script>
 <div class="container">
     <h1>Add City</h1>
 
@@ -25,6 +32,7 @@
             <br>
 
             <button type="submit" class="pure-button pure-button-primary">Add to Trip</button>
+            <button type="button" onclick="visitTrip();">View Trip</button>
         </fieldset>
     </form>
 

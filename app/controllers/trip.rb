@@ -1,25 +1,21 @@
-helpers do
-  def require_unless_logged_in!
-    redirect '/signup' unless user_logged_in?
-  end
 
-  def user_logged_in?
-    puts "is logged in?"
-    session[:logged_in]
-  end
-end
 
 
 # Display list of all trips
 get '/trips' do
   @trips = Trip.all
-  erb :trips
+  erb :'trip/index'
 end
-
 
 # Return an HTML form for creating a new trip
 get '/trips/new' do
   erb :new_trip
+end
+
+# Displays
+get '/trips/:id' do
+  @trip = Trip.find(params[:id])
+  erb :'trip/show'
 end
 
 
@@ -48,7 +44,7 @@ end
 get '/trips/:id/city/:city_id' do
   @trip = Trip.find(params[:id])
   @city = City.find(params[:city_id])
-  erb :show
+  erb :'trip/show'
 end
 
 
@@ -69,34 +65,3 @@ end
 #   # redirect = "/trips/#{@city.trip_id}"
 # end
 
-get '/signup' do
-  erb :signup
-end
-
-post '/signup' do
-  if params[:passphrase] == "I love passwords"
-    redirect 'secure'
-    session[:logged_in] == true
-  end
-end
-
-get '/signin' do
-  erb :signin
-end
-
-post '/signin' do #login
-  user = User.where(email: params[:email]).first
-  if user && user.password == params[:password]
-    # session[:user_id] = user.id
-    signin(user)
-    redirect to ('/')
-  else
-    @login_failed = true
-    erb :signin
-  end
-end
-
-get '/signout' do
-  signout!
-  redirect to('/')
-end
