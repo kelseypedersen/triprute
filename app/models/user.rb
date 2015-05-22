@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   # users.password_hash in the database is a :string
   include BCrypt
 
-  validates :email, presence: true
+  validates :email, uniqueness: true
   validates :password_hash, presence: true
 
   def password

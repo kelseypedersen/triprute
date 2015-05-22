@@ -2,8 +2,8 @@
   <h1>Welcome back user <%= session[:user_id] %></h1>
   <a href="/signout">Signout</a>
 <% else %>
-  <a href="/signup">Signup</a>
-  <a href="/signin">Signin</a>
+  <a href="/users/new">Signup</a>
+  <a href="/sessions/new">Signin</a>
 <% end %>
 <br>
 

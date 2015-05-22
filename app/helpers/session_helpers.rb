@@ -1,6 +1,6 @@
 helpers do
 
-  def signin(user)
+  def login(user)
     session[:user_id] = user.id
   end
 
@@ -9,10 +9,11 @@ helpers do
 
   def current_user
     @user ||= User.where(id: session[:user_id]).first if session[:user_id]
+    end
   end
 
   def require_unless_logged_in!
-    redirect '/signup' unless user_logged_in?
+    redirect '/users/new' unless user_logged_in?
   end
 
   def user_logged_in?

@@ -1,22 +1,27 @@
 # Displays the signin page
-get '/session/new' do
-  erb :'login/signin'
+get '/sessions/new' do
+  erb :'sessions/new'
 end
 
 # Creates a signin
-post '/session' do
+post '/sessions' do
   user = User.where(email: params[:email]).first
   if user && user.password == params[:password]
     # session[:user_id] = user.id
-    signin(user)
+    login(user)
     redirect to ('/')
   else
     @login_failed = true
-    erb :'login/signin'
+    erb :'sessions/new'
   end
 end
 
-delete '/session/:id' do
+# delete '/sessions/:id' do
+#   signout!
+#   redirect to('/')
+# end
+
+get '/signout' do
   signout!
   redirect to('/')
 end
