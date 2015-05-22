@@ -1,35 +1,31 @@
 <div class="container">
-  <h1>Add a Citaaaay!</h1>
+    <h1>Add City</h1>
 
-  <form id="new_city" method="post" action="/city">
+    <form class="pure-form pure-form-stacked" method="post" action="/trips/<%=@trip.id%>/city">
+        <fieldset>
 
-    <label class="label" form="city">City</label>
-    <input type="text" name="city" placeholder="e.g., San Francisco" >
-    <br>
+            <label class="label" form="city">City</label>
+            <input type="text" name="city" placeholder="e.g., San Francisco" >
 
-    <label class="label" form="country">Country</label>
-    <input type="text" name="country" placeholder="e.g., USA" >
-    <br>
+            <label class="label" form="country">Country</label>
+            <input type="text" name="country" placeholder="e.g., USA" >
 
-    <label class="label" form="highlights">Highlights</label>
-    <input type="text" name="highlights" placeholder="e.g., Beach volleyball at Playa Carmen">
-    <br>
+            <label class="label" form="highlights">Highlights</label>
+            <input type="text" name="highlights" placeholder="e.g., Beach volleyball at Playa Carmen">
 
-    <label class="label" form="lodging">Lodging</label>
-    <input type="text" name="lodging" placeholder="e.g., Hilton del Playa">
-    <br>
+            <label class="label" form="lodging">Lodging</label>
+            <input type="text" name="lodging" placeholder="e.g., Hilton del Playa">
 
-    <label class="transportation" form="transportation">Transportation</label>
-    <input type="text" name="transportation" placeholder="e.g., Hilton del Playa">
-    <br>
+            <label class="transportation" form="transportation">Transportation</label>
+            <input type="text" name="transportation" placeholder="e.g., Hilton del Playa">
 
-    <label class="days" form="days">Days</label>
-    <input type="text" name="days" placeholder="e.g., 5">
-    <br>
-    <div class="submit">
-      <input type="submit" value="Add another city">
-      <input type="submit" value="Finish itinerary">
-    </div>
-  </form>
+            <label class="days" form="days">Days</label>
+            <input type="text" name="days" placeholder="e.g., 5">
+            <br>
+            <br>
+
+            <button type="submit" class="pure-button pure-button-primary">Add to Trip</button>
+        </fieldset>
+    </form>
 
 </div>

@@ -7,6 +7,8 @@ class CreateTrips < ActiveRecord::Migration
       t.text :comments
       t.binary :photo
 
+      t.references :city
+
       t.timestamps
     end
   end

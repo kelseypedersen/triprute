@@ -1,6 +1,15 @@
+<% if session[:user_id] %>
+  <h1>Welcome back user <%= session[:user_id] %></h1>
+  <a href="/signout">Signout</a>
+<% else %>
+  <a href="/signup">Signup</a>
+  <a href="/signin">Signin</a>
+<% end %>
+<br>
+
 <form action="/trips/new" method="get">
 <input type="submit" value="Add an Itinerary!">
 </form>
 
 <br>
-This is the home page!
+<h3>This is the home page!</h3>

@@ -1,26 +1,26 @@
 <div class="container">
-  <h1>Add Your Itinerary!</h1>
+  <h1>Add Your Trip</h1>
 
-  <form id="new_trip" method="post" action="/trips">
+  <form class="pure-form pure-form-stacked" method="post" action="/trips">
+    <fieldset>
+        <label class="label" form="title">Title</label>
+        <input type="text" name="title" placeholder="e.g., 12 Days in Northern California" >
+        <br>
 
-    <label class="label" form="title">Title</label>
-    <input type="text" name="title" placeholder="e.g., 12 Days in Northern California" >
-    <br>
+        <label class="label" form="category">Category</label>
+        <input type="text" name="category" placeholder="e.g., Adventure, Family, Romance, etc" >
+        <br>
 
-    <label class="label" form="category">Category</label>
-    <input type="text" name="category" placeholder="e.g., Adventure, Family, Romance, etc" >
-    <br>
+        <label class="label" form="season">Season</label>
+        <input type="text" name="season" placeholder="Spring, Summer, Fall, Winter">
+        <br>
 
-    <label class="label" form="season">Season</label>
-    <input type="text" name="season" placeholder="Spring, Summer, Fall, Winter">
-    <br>
+        <label class="label" form="comments">Comments</label>
+        <input type="text" name="comments" placeholder="Make sure you pack sunscreen!">
+        <br>
 
-    <label class="label" form="comments">Comments</label>
-    <input type="text" name="comments" placeholder="Make sure you pack sunscreen!">
-    <br>
-
-    <div class="submit"><input type="submit" value="Add Your Itinerary"></div>
-  </form>
-
+        <button type="submit" class="pure-button pure-button-primary">Add Trip</button>
+    </fieldset>
+</form>
 </div>
 
