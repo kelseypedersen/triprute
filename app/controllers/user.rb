@@ -10,15 +10,10 @@ post '/users' do
   @user = User.new(username: params[:username], email: params[:email], password: params[:password])
   @user.password = params[:password]
   if @user.save
-    session[:user_id] = @user.id
+    login(@user)
+    #session[:user_id] = @user.id
     redirect to ('/')
   else
     erb :'users/new'
   end
 end
-
-# def create
-#   @user = User.new(params[:user])
-#   @user.password = params[:password]
-#   @user.save!
-# end
