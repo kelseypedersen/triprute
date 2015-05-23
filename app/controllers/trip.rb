@@ -18,7 +18,14 @@ end
 
 # Create a new trip
 post '/trips' do
-  @trip = Trip.create(title: params[:title], category: params[:category], season: params[:season], comments: params[:comments], photo: params[:photo], user_id: session[:user_id])
+  @trip = Trip.create(
+                title: params[:title],
+                category: params[:category],
+                season: params[:season],
+                comments: params[:comments],
+                photo: params[:photo],
+                user_id: session[:user_id]
+                )
   redirect "/trips/#{@trip.id}/destinations/new"
 end
 # Redirects to create a new destination page

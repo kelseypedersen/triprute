@@ -1,15 +1,14 @@
 <div class="container">
 
-  <h1><%= @user.username %></h1><br>
-  category: <%= @user.email %><br>
+  <h1><%=@user.username%></h1>
+  category: <%=@user.email%>
 
   <form class="pure-form pure-form-stacked" method="get" action="/users/<%=@user.id%>/edit">
-    <input type="submit" value="edit">
+    <input type="submit" value="edit profile">
   </form>
 
   <% @user.trips.each do |trip| %>
-   Trip Title: <%= trip.title %><br>
+   Trip Title: <a href='/trips/<%=trip.id%>'><%= trip.title %></a><br>
   <% end %>
-
 
 </div>

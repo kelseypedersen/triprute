@@ -10,6 +10,7 @@ get '/users/:id' do
 end
 
 get '/users/:id/edit' do
+  @user = User.find(params[:id])
   erb :'users/edit'
 end
 
@@ -21,16 +22,14 @@ end
 put '/users/:id' do
   @user = User.find(params[:id])
   @user.update(username: params[:username], email: params[:email], password: params[:password])
-  redirect to ("/users/#{@trip.id}")
+  redirect to ("/users/#{@user.id}")
+  "Hi"
 end
 
 post '/users/:id' do
   @user = User.find(params[:id])
   "Hello World"
 end
-
-
-
 
 
 # Creates a new signup
