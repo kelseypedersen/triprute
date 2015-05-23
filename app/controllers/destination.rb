@@ -8,7 +8,15 @@ end
 post '/trips/:id/destinations' do
   p params
   @trip = Trip.find(params[:id])
-  @destination = Destination.create(city: params[:city], country: params[:country], highlights: params[:highlights], lodging: params[:lodging], transportation: params[:transportation], days: params[:days], trip_id: params[:id])
+  @destination = Destination.create(
+                          city: params[:city],
+                          country: params[:country],
+                          highlights: params[:highlights],
+                          lodging: params[:lodging],
+                          transportation: params[:transportation],
+                          days: params[:days],
+                          trip_id: params[:id]
+                          )
   redirect "/trips/#{@trip.id}/destinations/#{@destination.id}"
 end
 

@@ -1,6 +1,7 @@
 class Destination < ActiveRecord::Base
 
+  belongs_to :trip
+
   validates :days, numericality: true
 
-  belongs_to :trip
 end
