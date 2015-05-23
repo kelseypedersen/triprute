@@ -1,18 +1,9 @@
 <!-- Displays all trips -->
 
-<% @trips.each do |trip| %>
-
-  title: <%= trip.title %><br>
-  category: <%= trip.category %><br>
-  season: <%= trip.season %><br>
-  comments: <%= trip.comments %><br>
-  <br>
-
-  <% trip.destinations.each do |destination| %>
-      <%= destination.city %><br>
-      <hr>
+<h1> All Trips </h1>
+ <% @trips.each do |trip| %>
+   Trip Title: <a href='/trips/<%=trip.id%>'><%= trip.title %></a><br>
   <% end %>
-<% end %>
 
 
 

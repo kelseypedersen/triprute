@@ -9,6 +9,12 @@ get '/trips/new' do
   erb :'trips/new'
 end
 
+
+# get '/trips/:category' do
+#   @trip = Trip.where(category: params[:category])
+#   erb :'trips/category'
+# end
+
 # Displays the specific
 get '/trips/:id' do
   @trip = Trip.find(params[:id])
@@ -31,21 +37,4 @@ end
 # Redirects to create a new destination page
 
 
-
-# post '/trips/:id' do
-#   #@trip = Trip.find(params[:id])
-#   "showing page!"
-# end
-
-# get '/trips/:id' do
-#   @trip = Trip.find(params[:id])
-#   erb :show
-# end
-
-# Returns an HTML form for creating a new destination within a trip
-# post '/city' do
-#   p @city = City.create(params)
-#   p @city.trip_id
-#   # redirect = "/trips/#{@city.trip_id}"
-# end
 

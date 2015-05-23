@@ -16,7 +16,9 @@
 /* ------->>> GLOBAL <<<------- */
 /* ---------------------------- */
 
-
+.home {
+  text-align: center;
+}
 
 
 
@@ -25,8 +27,9 @@
 /* ---------------------------- */
 
 .left-header {
-  position: relative;
-  left: 0em;
+  position: absolute;
+
+  background-color: #f0f0f0;
 }
 
 .right-header {
