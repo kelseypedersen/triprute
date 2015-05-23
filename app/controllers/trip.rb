@@ -9,7 +9,7 @@ get '/trips/new' do
   erb :'trips/new'
 end
 
-# Displays
+# Displays the specific
 get '/trips/:id' do
   @trip = Trip.find(params[:id])
   erb :'trips/show'

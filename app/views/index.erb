@@ -1,12 +1,14 @@
-
 <div class="nav_bar_login">
+
   <form action="/trips/new" method="get">
     <input type="submit" value="Add an Itinerary!">
   </form>
 
   <% if current_user %>
     <h1>Welcome back, <%= current_user.username %></h1>
+    <a href="/users/<%= @user.id %>">My profile</p>
     <a href="/signout">Signout</a>
+
 <% else %>
   <a href="/users/new">Signup</a>
   <a href="/sessions/new">Signin</a>

@@ -7,12 +7,12 @@
   <br>
 
   <% @trip.destinations.each do |destination| %>
-      <%= destination.city %><br>
-      <%= destination.country %><br>
-      <%= destination.highlights %><br>
-      <%= destination.lodging %><br>
-      <%= destination.transportation %><br>
-      <%= destination.days %><br>
+      City: <%= destination.city %><br>
+      Country: <%= destination.country %><br>
+      Highlights: <%= destination.highlights %><br>
+      Lodging: <%= destination.lodging %><br>
+      Transportation:<%= destination.transportation %><br>
+      Days: <%= destination.days %><br>
       <hr>
   <% end %>
 

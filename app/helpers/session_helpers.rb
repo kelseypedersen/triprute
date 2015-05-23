@@ -23,7 +23,6 @@ helpers do
   end
 
   def user_logged_in?
-    puts "is logged in?"
     session[:logged_in]
   end
 end

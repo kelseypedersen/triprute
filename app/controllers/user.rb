@@ -4,6 +4,35 @@ get '/users/new' do
   erb :'users/new'
 end
 
+get '/users/:id' do
+  @user = User.find(params[:id])
+  erb :'users/show'
+end
+
+get '/users/:id/edit' do
+  erb :'users/edit'
+end
+
+post '/users/:id/edit' do
+  @user = User.find(params[:id])
+  erb :'users/edit'
+end
+
+put '/users/:id' do
+  @user = User.find(params[:id])
+  @user.update(username: params[:username], email: params[:email], password: params[:password])
+  redirect to ("/users/#{@trip.id}")
+end
+
+post '/users/:id' do
+  @user = User.find(params[:id])
+  "Hello World"
+end
+
+
+
+
+
 # Creates a new signup
 post '/users' do
   p "This is the post signup"
@@ -17,3 +46,6 @@ post '/users' do
     erb :'users/new'
   end
 end
+
+
+

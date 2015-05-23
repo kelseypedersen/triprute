@@ -9,6 +9,7 @@ function visitTrip(){
     <h1>Add City</h1>
 
     <form class="pure-form pure-form-stacked" method="post" action="/trips/<%=@trip.id%>/destinations">
+
         <fieldset>
 
             <label class="label" form="city">City</label>
@@ -32,7 +33,8 @@ function visitTrip(){
             <br>
             <br>
 
-            <button type="submit" class="pure-button pure-button-primary">Add to Trip</button>
+            <button type="submit" class="pure-button pure-button-primary">Submit</button>
+
             <button type="button" class="pure-button pure-button-primary" onclick="visitTrip();">View Trip</button>
         </fieldset>
     </form>
