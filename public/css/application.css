@@ -24,14 +24,21 @@
 /* ------->>> HEADER <<<------- */
 /* ---------------------------- */
 
-
-.nav_bar_login {
-  font-size: 1em;
-  right: 0.5em;
-  top: 0.5em;
-  position: right;
-  right: 0.1em;
+.left-header {
+  position: relative;
+  left: 0em;
 }
+
+.right-header {
+}
+
+.main {
+  text-align: center;
+  position: relative;
+}
+
+
+
 
 
 /* ---------------------------- */

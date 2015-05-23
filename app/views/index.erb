@@ -1,23 +1,37 @@
-<div class="nav_bar_login">
 
-  <form action="/trips/new" method="get">
-    <input type="submit" value="Add an Itinerary!">
-  </form>
-
-  <% if current_user %>
-    <h1>Welcome back, <%= current_user.username %></h1>
-    <a href="/users/<%= @user.id %>">My profile</p>
-    <a href="/signout">Signout</a>
-
-<% else %>
-  <a href="/users/new">Signup</a>
-  <a href="/sessions/new">Signin</a>
-<% end %>
+  <div class="pure-menu pure-menu-horizontal">
+    <div class="left-header">
+      <a href="/" class="pure-menu-heading pure-menu-link">PASSION PROJECT</a>
+    </div>
+      <ul class="pure-menu-list">
 
 
-<br>
+    <div class="right-header">
+      <% if current_user %>
+        <h1>Welcome back, <%= current_user.first_name %></h1>
+        <li class="pure-menu-item"><a href="/users/<%= @user.id %>" class="pure-menu-link">My profile</a></li>
+        <li class="pure-menu-item"><a href="/signout" class="pure-menu-link">Signout</a></li>
 
+      <% else %>
+        <li class="pure-menu-item"><a href="/users/new" class="pure-menu-link">Signup</a></li>
+        <li class="pure-menu-item"><a href="/sessions/new" class="pure-menu-link">Signin</a></li>
+      <% end %>
+
+      <li class="pure-menu-item">
+        <form class="pure-menu-link" action="/trips/new" method="get">
+          <input type="submit" value="Add an Itinerary!">
+        </form>
+      </li>
+
+    </ul>
+  </div>
+  </div>
 </div>
-<br>
-<h3><center>This is the home page!</center></h3>
+
+<div class="main">
+  This is the home page!
+</div>
+
+
+
 

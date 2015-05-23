@@ -21,7 +21,7 @@ end
 
 put '/users/:id' do
   @user = User.find(params[:id])
-  @user.update(username: params[:username], email: params[:email], password: params[:password])
+  @user.update(username: params[:username], first_name: params[:first_name], last_name: params[:last_name], email: params[:email], password: params[:password])
   redirect to ("/users/#{@user.id}")
   "Hi"
 end
@@ -35,7 +35,7 @@ end
 # Creates a new signup
 post '/users' do
   p "This is the post signup"
-  @user = User.new(username: params[:username], email: params[:email], password: params[:password])
+  @user = User.new(username: params[:username], first_name: params[:first_name], last_name: params[:last_name], email: params[:email], password: params[:password])
   @user.password = params[:password]
   if @user.save
     login(@user)
