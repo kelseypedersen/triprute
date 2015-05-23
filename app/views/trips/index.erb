@@ -1,0 +1,18 @@
+<!-- Displays all trips -->
+
+<% @trips.each do |trip| %>
+
+  title: <%= trip.title %><br>
+  category: <%= trip.category %><br>
+  season: <%= trip.season %><br>
+  comments: <%= trip.comments %><br>
+  <br>
+
+  <% trip.destinations.each do |destination| %>
+      <%= destination.city %><br>
+      <hr>
+  <% end %>
+<% end %>
+
+
+

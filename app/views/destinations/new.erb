@@ -8,7 +8,7 @@ function visitTrip(){
 <div class="container">
     <h1>Add City</h1>
 
-    <form class="pure-form pure-form-stacked" method="post" action="/trips/<%=@trip.id%>/city">
+    <form class="pure-form pure-form-stacked" method="post" action="/trips/<%=@trip.id%>/destinations">
         <fieldset>
 
             <label class="label" form="city">City</label>
@@ -16,6 +16,9 @@ function visitTrip(){
 
             <label class="label" form="country">Country</label>
             <input type="text" name="country" placeholder="e.g., USA" >
+
+            <label class="days" form="days">Days</label>
+            <input type="text" name="days" placeholder="e.g., 5">
 
             <label class="label" form="highlights">Highlights</label>
             <input type="text" name="highlights" placeholder="e.g., Beach volleyball at Playa Carmen">
@@ -26,13 +29,11 @@ function visitTrip(){
             <label class="transportation" form="transportation">Transportation</label>
             <input type="text" name="transportation" placeholder="e.g., Hilton del Playa">
 
-            <label class="days" form="days">Days</label>
-            <input type="text" name="days" placeholder="e.g., 5">
             <br>
             <br>
 
             <button type="submit" class="pure-button pure-button-primary">Add to Trip</button>
-            <button type="button" onclick="visitTrip();">View Trip</button>
+            <button type="button" class="pure-button pure-button-primary" onclick="visitTrip();">View Trip</button>
         </fieldset>
     </form>
 

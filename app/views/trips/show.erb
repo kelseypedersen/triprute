@@ -1,0 +1,22 @@
+<div class="container">
+
+  <h1><%= @trip.title %></h1><br>
+  category: <%= @trip.category %><br>
+  season: <%= @trip.season %><br>
+  comments: <%= @trip.comments %><br>
+  <br>
+
+  <% @trip.destinations.each do |destination| %>
+      <%= destination.city %><br>
+      <%= destination.country %><br>
+      <%= destination.highlights %><br>
+      <%= destination.lodging %><br>
+      <%= destination.transportation %><br>
+      <%= destination.days %><br>
+      <hr>
+  <% end %>
+
+
+<form action="/trips/<%= @trip.id %>/destinations/new" method="get">
+<input type="submit" value="Add city!">
+</form>

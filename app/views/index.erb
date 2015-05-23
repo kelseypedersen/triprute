@@ -1,16 +1,22 @@
-<% if current_user %>
-  <h1>Welcome back, <%= current_user.username %></h1>
-  <a href="/signout">Signout</a>
+
+<div class="nav_bar_login">
+  <form action="/trips/new" method="get">
+    <input type="submit" value="Add an Itinerary!">
+  </form>
+
+  <% if current_user %>
+    <h1>Welcome back, <%= current_user.username %></h1>
+    <a href="/signout">Signout</a>
 <% else %>
   <a href="/users/new">Signup</a>
   <a href="/sessions/new">Signin</a>
 <% end %>
+
+
 <br>
 
-<form action="/trips/new" method="get">
-<input type="submit" value="Add an Itinerary!">
-</form>
 
+</div>
 <br>
 <h3><center>This is the home page!</center></h3>
 

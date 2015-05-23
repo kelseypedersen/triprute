@@ -16,12 +16,12 @@ post '/sessions' do
   end
 end
 
-# delete '/sessions/:id' do
-#   signout!
-#   redirect to('/')
-# end
-
 get '/signout' do
   signout!
   redirect to('/')
 end
+
+# delete '/sessions/:id' do
+#   signout!
+#   redirect to('/')
+# end
