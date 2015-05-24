@@ -20,27 +20,43 @@
   text-align: center;
 }
 
+.trips_all {
+  font-size: 3em;
+  text-align: center;
+  padding-top: 1em;
+}
+
+.search_bar {
+  margin: 1em;
+  position: absolute;
+  right: 0px;
+}
+
+
 
 
 /* ---------------------------- */
 /* ------->>> HEADER <<<------- */
 /* ---------------------------- */
 
-.left-header {
+.nav-bar {
   position: absolute;
-
   background-color: #f0f0f0;
-}
-
-.right-header {
 }
 
 .main {
   text-align: center;
-  position: relative;
+  position: absolute;
 }
 
-
+.header {
+  position: relative;
+  background-image: url("../imgs/polyjpg.jpg");
+  background-repeat: repeat;
+  background-size: cover;
+  height: 400px;
+  width: 100%;
+}
 
 
 
