@@ -1,11 +1,21 @@
-<h1>Sign IN!</h1>
+<div class="container">
 
-<% if @login_failed %>
-  <h2> Bad email or password - try again!</h2>
-<% end %>
+  <div class="session_new">
 
-<form action='/sessions' method='post'>
-  <input type='text' name='email' placeholder='email'/>
-  <input type='text' name='password' placeholder='password'/>
-  <input type='submit' value='signin'/>
-</form>
+    <h1>Log in</h1>
+
+    <a href="/users/new">Or, sign up</a>
+
+    <% if @login_failed %>
+    <h2> Bad email or password - try again!</h2>
+    <% end %>
+
+    <form action='/sessions' method='post'>
+      <input type='text' name='email' placeholder='email'/>
+      <input type='text' name='password' placeholder='password'/>
+      <input type='submit' value='signin'/>
+    </form>
+
+  </div>
+
+</div>

@@ -1,6 +1,5 @@
 # Displays the signup page
 get '/users/new' do
-  "This is the get signup"
   erb :'users/new'
 end
 

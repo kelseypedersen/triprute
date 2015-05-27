@@ -1,7 +1,28 @@
-$(document).ready(function() {
-  // This is called after the document has loaded in its entirety
-  // This guarantees that any elements we bind to will exist on the page
-  // when we try to bind to them
+// $(document).ready(function() {
 
-  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
-});
+//     function close_accordion_section() {
+//         $('.accordion .accordion-section-title').removeClass('active');
+//         $('.accordion .accordion-section-content').slideUp(300).removeClass('open');
+//     }
+
+//     $('.accordion-section-title').on('click', function(e) {
+//         // Grab current anchor value
+//         var currentAttrValue = $(this).attr('href');
+
+//         if($(e.target).is('.active')) {
+//             close_accordion_section();
+//         }else {
+//             close_accordion_section();
+
+//             // Add active class to section title
+//             $(this).addClass('active');
+//             // Open up the hidden content panel
+//             $('.accordion ' + currentAttrValue).slideDown(300).addClass('open');
+//         }
+
+//         e.preventDefault();
+//     });
+
+
+// });
+

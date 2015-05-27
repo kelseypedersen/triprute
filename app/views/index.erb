@@ -1,55 +1,64 @@
 <div class="header">
 
+  <div class="nav_bar">
 
+    <div class="pure-menu pure-menu-horizontal">
 
-<div class="home">
-  <div class="pure-menu pure-menu-horizontal">
+      <a href="/" class="pure-menu-heading pure-menu-link">Triprute</a>
 
-    <a href="/" class="pure-menu-heading pure-menu-link">PASSION PROJECT</a>
-    <ul class="pure-menu-list">
+      <ul class="pure-menu-list">
 
-      <li class="pure-menu-item">
-        <form class="pure-menu-link" action="/trips/new" method="get">
-          <input type="submit" value="Add an Itinerary!">
-        </form>
-      </li>
+        <% if current_user %>
 
-      <% if current_user %>
-        <li class="pure-menu-item"><a href="/users/<%= @user.id %>" class="pure-menu-link">My profile</a></li>
-        <li class="pure-menu-item"><a href="/signout" class="pure-menu-link">Signout</a></li>
-        <h1>Welcome back, <%= current_user.first_name %></h1>
+         <li class="pure-menu-item">
+          <a href="/trips" class="pure-menu-link">Browse Trips
+          </a>
+        </li>
 
-      <% else %>
-        <li class="pure-menu-item"><a href="/users/new" class="pure-menu-link">Signup</a></li>
-        <li class="pure-menu-item"><a href="/sessions/new" class="pure-menu-link">Signin</a></li>
-      <% end %>
+        <li class="pure-menu-item">
+          <a href="/users/<%= @user.id %>" class="pure-menu-link">My profile
+          </a>
+        </li>
 
-    </ul>
+        <li class="pure-menu-item">
+          <a href="/signout" class="pure-menu-link">Sign out
+          </a>
+        </li>
+        <!-- <h1>Welcome back, <%= current_user.first_name %></h1> -->
 
+        <% else %>
 
+        <li class="pure-menu-item">
+          <a href="/users/new" class="pure-menu-link">Sign up
+          </a>
+        </li>
+
+        <li class="pure-menu-item">
+          <a href="/sessions/new" class="pure-menu-link">Sign in
+          </a>
+        </li>
+
+        <% end %>
+
+          <li class="pure-menu-item">
+          <form class="pure-menu-link" action="/trips/new" method="get">
+            <input type="submit" value="Add an Itinerary!">
+          </form>
+        </li>
+
+      </ul>
+    </div>
   </div>
-
 </div>
 
 
+<div class="browse_trips">
+  Browse all trips
 </div>
 
-<div class="search_bar">
-  <div class="row">
-    <div class="col-lg-6">
-      <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search for...">
-        <span class="input-group-btn">
-          <button class="btn btn-default" type="button">Go!</button>
-        </span>
-      </div><!-- /input-group -->
-    </div><!-- /.col-lg-6 -->
-  </div><!-- /.row -->
-</div>
-</div>
 
-<div class="trips_all">
- <a href="/trips" class="pure-menu-heading pure-menu-link">View All Trips</a>
+<div class="footer">
+
 </div>
 
 

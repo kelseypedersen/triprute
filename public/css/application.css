@@ -16,15 +16,10 @@
 /* ------->>> GLOBAL <<<------- */
 /* ---------------------------- */
 
-.home {
+.nav-bar {
   text-align: center;
 }
 
-.trips_all {
-  font-size: 3em;
-  text-align: center;
-  padding-top: 1em;
-}
 
 .search_bar {
   margin: 1em;
@@ -32,7 +27,9 @@
   right: 0px;
 }
 
+body {
 
+}
 
 
 /* ---------------------------- */
@@ -58,19 +55,113 @@
   width: 100%;
 }
 
+/* ---------------------------- */
+/* ------->>> FOOTER <<<------- */
+/* ---------------------------- */
+
+.footer {
+  position: relative;
+  bottom: 0px;
+  background-image: url("../imgs/grey_wash.png");
+  background-repeat: repeat;
+
+  height: 200px;
+  width: 100%;
+}
+
 
 
 /* ---------------------------- */
-/* --->>> PAGE STRUCTURE <<<--- */
+/* ----->>> SIGNIN PAGE <<<---- */
+/* ---------------------------- */
+
+.container {
+  margin: 50px auto;
+  width: 640px;
+}
+
+.session_new {
+  position: relative;
+  margin: 0 auto;
+  padding: 20px 20px 20px;
+  width: 310px;
+}
+
+.session_new h1 {
+  text-align: center;
+}
+
+
+
+/* ---------------------------- */
+/* --->>> HOME PAGE <<<--- */
+/* ---------------------------- */
+
+.browse_trips {
+  font-size: 20px;
+  color: #777;
+  text-align: center;
+  margin: 2em;
+}
+
+/* ---------------------------- */
+/* --->>> LISTS <<<--- */
 /* ---------------------------- */
 
 
 
 
+
 /* ---------------------------- */
-/* ------>>> HEADINGS <<<------ */
+/* ------>>> SHOW TRIPS <<<------ */
 /* ---------------------------- */
 
+#trip_header {
+  text-decoration: none;
+}
+
+.accordion, .accordion * {
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+}
+
+.accordion {
+    overflow:hidden;
+    box-shadow:0px 1px 3px rgba(0,0,0,0.25);
+    border-radius:3px;
+    background:#f7f7f7;
+}
+
+/*----- Section Titles -----*/
+.accordion-section-title {
+    width:100%;
+    padding:15px;
+    display:inline-block;
+    border-bottom:1px solid #1a1a1a;
+    background:#333;
+    transition:all linear 0.15s;
+    /* Type */
+    font-size:1.200em;
+    text-shadow:0px 1px 0px #1a1a1a;
+    color:#fff;
+}
+
+.accordion-section-title.active, .accordion-section-title:hover {
+    background:#4c4c4c;
+    /* Type */
+    text-decoration:none;
+}
+
+.accordion-section:last-child .accordion-section-title {
+    border-bottom:none;
+}
+
+/*----- Section Content -----*/
+.accordion-section-content {
+    padding:15px;
+    display:none;
+}
 
 
 
@@ -96,6 +187,9 @@
 /* ---------------------------- */
 /* ------>>> COMMENTS <<<------ */
 /* ---------------------------- */
+
+
+
 
 /* ---------------------------- */
 /* ------->>> EXTRAS<<< ------- */

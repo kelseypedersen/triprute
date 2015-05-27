@@ -1,24 +1,31 @@
-<div class="container">
 
-  <a href="/">home</a>
+  <a href="/">home</a><br>
 
-  <h1><%= @trip.title %></h1><br>
-  category: <%= @trip.category %><br>
-  season: <%= @trip.season %><br>
-  comments: <%= @trip.comments %><br>
-  <br>
+  <ul id="trip_header">
+  <li><%= @trip.title %></li>
+  <li>Shared by: <a href="/users/<%=@trip.user.id%>"><%= @trip.user.username %></a></li>
+
+  <li>category: <%= @trip.category %></li>
+  <li>season: <%= @trip.season %></li>
+  <li>comments: <%= @trip.comments %></li>
+  </ul>
 
   <% @trip.destinations.each do |destination| %>
-      City: <%= destination.city %><br>
-      Country: <%= destination.country %><br>
-      Highlights: <%= destination.highlights %><br>
-      Lodging: <%= destination.lodging %><br>
-      Transportation:<%= destination.transportation %><br>
-      Days: <%= destination.days %><br>
-      <hr>
+
+  <ul id="accordion">
+    <li>
+      <a href="#trips>"><%= destination.city %>, <%= destination.city %></a>
+
+        <li>Highlights: <%= destination.highlights %></li>
+        <li>Lodging: <%= destination.lodging %></li>
+        <li>Transportation: <%= destination.transportation %></li>
+      </li>
+    </ul>
+
   <% end %>
 
-
 <form action="/trips/<%= @trip.id %>/destinations/new" method="get">
-<input type="submit" value="Add city!">
+  <input type="submit" value="Add city!">
 </form>
+
+<!--http://inspirationalpixels.com/tutorials/creating-an-accordion-with-html-css-jquery-->

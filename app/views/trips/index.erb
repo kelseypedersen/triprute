@@ -1,9 +1,12 @@
 <!-- Displays all trips -->
 
 <h1> All Trips </h1>
- <% @trips.each do |trip| %>
-   Trip Title: <a href='/trips/<%=trip.id%>'><%= trip.title %></a><br>
-  <% end %>
+
+<% @trips.each do |trip| %>
+
+  <%= erb :"trips/_trips" , locals: {trip: trip} %>
+
+<% end %>
 
 
 

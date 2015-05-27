@@ -17,8 +17,6 @@ gem 'bcrypt'
 
 gem 'shotgun'
 
-gem 'elasticsearch-rails'
-
 group :test do
   gem 'shoulda-matchers'
   gem 'rack-test'
