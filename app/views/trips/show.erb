@@ -1,31 +1,42 @@
 
+
   <a href="/">home</a><br>
 
   <ul id="trip_header">
-  <li><%= @trip.title %></li>
-  <li>Shared by: <a href="/users/<%=@trip.user.id%>"><%= @trip.user.username %></a></li>
+    <li><%= @trip.title %></li>
 
-  <li>category: <%= @trip.category %></li>
-  <li>season: <%= @trip.season %></li>
-  <li>comments: <%= @trip.comments %></li>
+    <li>Shared by:
+      <a href="/users/<%=@trip.user.id%>"><%= @trip.user.username %></a>
+    </li>
+
+    <li>category: <%= @trip.category %></li>
+    <li>season: <%= @trip.season %></li>
+    <li>comments: <%= @trip.comments %></li>
   </ul>
 
-  <% @trip.destinations.each do |destination| %>
+
 
   <ul id="accordion">
+    <li><% @trip.destinations.each do |destination| %></li>
     <li>
-      <a href="#trips>"><%= destination.city %>, <%= destination.city %></a>
+      <a href="#trips>"><%= destination.city %>, <%= destination.city %>, <%= destination.days %> days
+      </a>
+    </li>
 
-        <li>Highlights: <%= destination.highlights %></li>
-        <li>Lodging: <%= destination.lodging %></li>
-        <li>Transportation: <%= destination.transportation %></li>
-      </li>
-    </ul>
-
-  <% end %>
+    <li>Highlights: <%= destination.highlights %></li>
+    <li>Lodging: <%= destination.lodging %></li>
+    <li>Transportation: <%= destination.transportation %></li>
+    <% end %>
+  </ul>
 
 <form action="/trips/<%= @trip.id %>/destinations/new" method="get">
   <input type="submit" value="Add city!">
 </form>
 
 <!--http://inspirationalpixels.com/tutorials/creating-an-accordion-with-html-css-jquery-->
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('#accordion').accordion();
+  });
+</script>

@@ -1,4 +1,4 @@
-/* Table of Contents */
+ Table of Contents */
 /* -------------------------------- */
 /* Global
 /* Header
@@ -27,9 +27,7 @@
   right: 0px;
 }
 
-body {
 
-}
 
 
 /* ---------------------------- */
@@ -117,52 +115,30 @@ body {
 /* ---------------------------- */
 
 #trip_header {
-  text-decoration: none;
+  list-style: none;
 }
 
-.accordion, .accordion * {
-    -webkit-box-sizing:border-box;
-    -moz-box-sizing:border-box;
-    box-sizing:border-box;
-}
+ul#accordion, ul#accordion ul { list-style: none; margin: 0; }
 
-.accordion {
-    overflow:hidden;
-    box-shadow:0px 1px 3px rgba(0,0,0,0.25);
-    border-radius:3px;
-    background:#f7f7f7;
-}
+ul#accordion ul li:last-child { border-bottom: none; }
 
-/*----- Section Titles -----*/
-.accordion-section-title {
-    width:100%;
-    padding:15px;
-    display:inline-block;
-    border-bottom:1px solid #1a1a1a;
-    background:#333;
-    transition:all linear 0.15s;
-    /* Type */
-    font-size:1.200em;
-    text-shadow:0px 1px 0px #1a1a1a;
-    color:#fff;
+ul#accordion a.heading {
+    background: #F4FFF9;
+    color: #999;
+    display: block;
+    font-size: 18px;
+    line-height: 18px;
+    padding: 10px 5px;
+    text-decoration: none;
 }
+ul#accordion a.heading:hover {
+  background: #00B9D2; color: #fff;
+  }
 
-.accordion-section-title.active, .accordion-section-title:hover {
-    background:#4c4c4c;
-    /* Type */
-    text-decoration:none;
-}
-
-.accordion-section:last-child .accordion-section-title {
-    border-bottom:none;
-}
-
-/*----- Section Content -----*/
-.accordion-section-content {
-    padding:15px;
-    display:none;
-}
-
+ul#accordion li ul a { border-bottom: 1px solid #00B9D2; color: #025185; text-decoration: none; }
+ul#accordion li ul a:hover { border-bottom: none; }
+ul#accordion li ul .date { padding-right: 10px; }
+ul#accordion li ul .count { padding-left: 10px; }
 
 
 /* ---------------------------- */
@@ -193,4 +169,4 @@ body {
 
 /* ---------------------------- */
 /* ------->>> EXTRAS<<< ------- */
-/* ---------------------------- */
+/* ----------------------------
