@@ -1,42 +1,31 @@
-<script type="text/javascript">
-function visitTrip(){
-    var loc = 'http://localhost:9393/trips/<%=@trip.id%>';
-    console.log(loc);
-    location.href = loc;
-}
-</script>
+
 <div class="container">
     <h1>Add City</h1>
 
     <form class="pure-form pure-form-stacked" method="post" action="/trips/<%=@trip.id%>/destinations">
 
-        <fieldset>
+        <label class="city" form="city">City</label>
+        <input type="text" id="city" name="city" placeholder="e.g., San Francisco" >
 
-            <label class="label" form="city">City</label>
-            <input type="text" name="city" placeholder="e.g., San Francisco" >
+        <label class="country" form="country">Country</label>
+        <input type="text" name="country" placeholder="e.g., USA" >
 
-            <label class="label" form="country">Country</label>
-            <input type="text" name="country" placeholder="e.g., USA" >
+        <label class="days" form="days">Days</label>
+        <input type="text" name="days" placeholder="e.g., 5">
 
-            <label class="days" form="days">Days</label>
-            <input type="text" name="days" placeholder="e.g., 5">
+        <label class="highlights" form="highlights">Highlights</label>
+        <input type="text" name="highlights" placeholder="e.g., Beach volleyball at Playa Carmen">
 
-            <label class="label" form="highlights">Highlights</label>
-            <input type="text" name="highlights" placeholder="e.g., Beach volleyball at Playa Carmen">
+        <label class="lodging" form="lodging">Lodging</label>
+        <input type="text" name="lodging" placeholder="e.g., Hilton del Playa">
 
-            <label class="label" form="lodging">Lodging</label>
-            <input type="text" name="lodging" placeholder="e.g., Hilton del Playa">
+        <label class="transportation" form="transportation">Transportation</label>
+        <input type="text" name="transportation" placeholder="e.g., Hilton del Playa">
 
-            <label class="transportation" form="transportation">Transportation</label>
-            <input type="text" name="transportation" placeholder="e.g., Hilton del Playa">
+        <br>
+        <br>
 
-            <br>
-            <br>
+        <button type="submit" class="pure-button pure-button-primary">Submit</button>
 
-            <button type="submit" class="pure-button pure-button-primary">Submit</button>
-
-            <button type="button" class="pure-button pure-button-primary" onclick="visitTrip();">View Trip</button>
-        </fieldset>
     </form>
-
 </div>

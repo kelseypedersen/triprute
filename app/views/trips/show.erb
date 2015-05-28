@@ -1,6 +1,4 @@
-
-
-  <a href="/">home</a><br>
+<a href="/">home</a><br>
 
   <ul id="trip_header">
     <li><%= @trip.title %></li>
@@ -15,8 +13,7 @@
   </ul>
 
 
-
-  <ul id="accordion">
+  <div id="accordion">
     <li><% @trip.destinations.each do |destination| %></li>
     <li>
       <a href="#trips>"><%= destination.city %>, <%= destination.city %>, <%= destination.days %> days

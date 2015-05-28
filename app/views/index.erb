@@ -1,61 +1,83 @@
-<div class="header">
+<header>
 
-  <div class="nav_bar">
+<div class="global-header">
 
-    <div class="pure-menu pure-menu-horizontal">
+  <div class="nav-bar">
 
-      <a href="/" class="pure-menu-heading pure-menu-link">Triprute</a>
-
-      <ul class="pure-menu-list">
+      <a href="/" >Triprute</a>
 
         <% if current_user %>
-
-         <li class="pure-menu-item">
-          <a href="/trips" class="pure-menu-link">Browse Trips
+        <div id="browse-trips">
+          <a href="/trips">Browse Trips
           </a>
-        </li>
+        </div>
 
-        <li class="pure-menu-item">
-          <a href="/users/<%= @user.id %>" class="pure-menu-link">My profile
+        <div id="my-profile">
+          <a href="/users/<%= @user.id %>" >My profile
           </a>
-        </li>
+        </div>
 
-        <li class="pure-menu-item">
-          <a href="/signout" class="pure-menu-link">Sign out
+        <div id="sign-out">
+          <a href="/signout">Sign out
           </a>
-        </li>
+        </div>
         <!-- <h1>Welcome back, <%= current_user.first_name %></h1> -->
 
         <% else %>
 
-        <li class="pure-menu-item">
-          <a href="/users/new" class="pure-menu-link">Sign up
+        <div id='sign-up'>
+          <a href="/users/new">Sign up
           </a>
-        </li>
+        </div>
 
-        <li class="pure-menu-item">
-          <a href="/sessions/new" class="pure-menu-link">Sign in
+        <div id="sign-in">
+          <a href="/sessions/new">Sign in
           </a>
-        </li>
+        </div>
 
         <% end %>
 
-          <li class="pure-menu-item">
-          <form class="pure-menu-link" action="/trips/new" method="get">
+          <div id="add-itinerary">
+          <form action="/trips/new" method="get">
             <input type="submit" value="Add an Itinerary!">
           </form>
-        </li>
+        </div>
 
-      </ul>
     </div>
   </div>
 </div>
+</header>
+
 
 
 <div class="browse_trips">
   Browse all trips
 </div>
 
+
+<div class="main_body">
+
+  <div id="trip_left">
+    "Trip left image"
+  </div>
+
+  <div id="trip_middle">
+    "trip middle image"
+  </div>
+
+  <div id="trip_right">
+    "trip right image"
+  </div>
+
+</div>
+
+
+
+<div class="second_body">
+  <div class="add_trips">
+    Add Your Trip
+  </div>
+</div>
 
 <div class="footer">
 
