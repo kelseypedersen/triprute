@@ -1,7 +1,8 @@
 > **Note**: This branch (master) contains a skeleton without any app code, perfect for creating a _new_ application or challenge. If you're looking for an example app built with this skeleton, take a look at the [example](/../..//tree/example) branch which includes basic CRUD and RSpec tests.
 
 ### Purpose
-Personal Project:
+
+Build a solo application to apply the following: 
 
 1. a database with 1 or more tables
 2. relevant Active Record migrations, models and validations
