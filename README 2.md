@@ -1,11 +1,14 @@
 > **Note**: This branch (master) contains a skeleton without any app code, perfect for creating a _new_ application or challenge. If you're looking for an example app built with this skeleton, take a look at the [example](/../..//tree/example) branch which includes basic CRUD and RSpec tests.
 
 ### Purpose
-The Sinatra Skeleton:
+Personal Project:
 
-1. Provides a foundation for building challenges or creating a new Sinatra application.
-2. Demonstrates a reasonable set of practices around building Sinatra applications.
-3. Eases the transition to Rails for Dev Bootcamp students
+1. a database with 1 or more tables
+2. relevant Active Record migrations, models and validations
+3. RESTful routes using Sinatra
+4. views using ERBs with HTML and CSS
+5. user login and authentication using bcrypt
+
 
 ### Quickstart
 
