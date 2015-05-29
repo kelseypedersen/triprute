@@ -1,38 +1,42 @@
 <div class="wrapper">
-  <div class="nav">
+
     <a href="/">Triprute</a>
 
     <% if current_user %>
 
-    <ul>
-      <li>
+    <div class="nav">
+      <div class="header-link">
         <a href="/trips">Browse Trips</a>
-      </li>
+      </div>
 
-      <li>
+      <div class="header-link">
         <a href="/users/<%= @user.id %>">My Profile</a>
-      </li>
+        </div>
 
-      <li>
+      <div class="header-link">
         <a href="/signout">Sign out</a>
-      </li>
+      </div>
 
       <% else %>
-
-    <div id="sign-up">
+    <div class="header-link">
       <a href="/users/new">Sign up</a>
     </div>
 
-    <div id="sign-in">
+    <div class="header-link">
       <a href="/sessions/new">Sign in</a>
     </div>
 
-    <% end %>
+    <div class="header-link">
+    <a href="/trips">Browse Trips</a>
+  </div>
 
+    <% end %>
+    <div class="header-link">
     <div id="add-itinerary">
       <form action="/trips/new" method="get">
         <input type="submit" value="Add an Itinerary!">
       </form>
     </div>
-  </div>
+
+
 </div>

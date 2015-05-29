@@ -4,6 +4,7 @@ class CreateTrips < ActiveRecord::Migration
       t.string :title
       t.string :category
       t.string :season
+      t.integer :favorites
       t.text :comments
       t.binary :photo
 

@@ -2,6 +2,8 @@
 
   <ul id="trip_header">
     <li><%= @trip.title %></li>
+    <a href='/trips/<%=@trip.id%>/wishlist' class='wishlist button'>Wishlist Button</a>
+    <li>Wishlist: <%= @trip.wishlist %></li>
 
     <li>Shared by:
       <a href="/users/<%=@trip.user.id%>"><%= @trip.user.username %></a>

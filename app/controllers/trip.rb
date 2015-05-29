@@ -18,6 +18,7 @@ end
 # Displays the specific
 get '/trips/:id' do
   @trip = Trip.find(params[:id])
+  p @trip
   erb :'trips/show'
 end
 
@@ -36,5 +37,10 @@ post '/trips' do
 end
 # Redirects to create a new destination page
 
+get '/trips/:id/favorites' do
+  trip = Trip.find(params[:id])
+  #trip.wishlist.create(value: 1)
+  redirect "/trips"
+end
 
 

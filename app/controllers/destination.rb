@@ -29,7 +29,7 @@ end
 
 get '/destinations' do
   p params
-  @list_of_destinations = ["San Francisco", "New York", "Los Angeles", "San Diego"]
+  @list_of_destinations = ["San Francisco", "New York", "Los Angeles", "San Diego", "Tokyo", "Austin", "Santa Clara", "Hong Kong", "London"]
   input_city_length = params[:input_city].length
   city_matches = @list_of_destinations.select { |destination| destination[0..input_city_length - 1] == params[:input_city]}
   city_matches.to_json
