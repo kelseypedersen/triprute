@@ -1,11 +1,15 @@
-
 <div class="container">
     <h1>Add City</h1>
 
     <form class="pure-form pure-form-stacked" method="post" action="/trips/<%=@trip.id%>/destinations">
 
         <label class="city" form="city">City</label>
-        <input type="text" id="city" name="city" placeholder="e.g., San Francisco" >
+        <input type="text" id="city" name="city" list="cities" autocomplete="off" placeholder="e.g., San Francisco" >
+        <datalist id="cities">
+            <option value="test 1">
+            <option value="test 2">
+            <option value="test 3">
+        </datalist>
 
         <label class="country" form="country">Country</label>
         <input type="text" name="country" placeholder="e.g., USA" >
