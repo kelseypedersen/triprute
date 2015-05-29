@@ -1,0 +1,38 @@
+<div class="wrapper">
+  <div class="nav">
+    <a href="/">Triprute</a>
+
+    <% if current_user %>
+
+    <ul>
+      <li>
+        <a href="/trips">Browse Trips</a>
+      </li>
+
+      <li>
+        <a href="/users/<%= @user.id %>">My Profile</a>
+      </li>
+
+      <li>
+        <a href="/signout">Sign out</a>
+      </li>
+
+      <% else %>
+
+    <div id="sign-up">
+      <a href="/users/new">Sign up</a>
+    </div>
+
+    <div id="sign-in">
+      <a href="/sessions/new">Sign in</a>
+    </div>
+
+    <% end %>
+
+    <div id="add-itinerary">
+      <form action="/trips/new" method="get">
+        <input type="submit" value="Add an Itinerary!">
+      </form>
+    </div>
+  </div>
+</div>

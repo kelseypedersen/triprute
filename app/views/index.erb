@@ -1,53 +1,5 @@
-<header>
-
 <div class="global-header">
-
-  <div class="nav-bar">
-
-      <a href="/" >Triprute</a>
-
-        <% if current_user %>
-        <div id="browse-trips">
-          <a href="/trips">Browse Trips
-          </a>
-        </div>
-
-        <div id="my-profile">
-          <a href="/users/<%= @user.id %>" >My profile
-          </a>
-        </div>
-
-        <div id="sign-out">
-          <a href="/signout">Sign out
-          </a>
-        </div>
-        <!-- <h1>Welcome back, <%= current_user.first_name %></h1> -->
-
-        <% else %>
-
-        <div id='sign-up'>
-          <a href="/users/new">Sign up
-          </a>
-        </div>
-
-        <div id="sign-in">
-          <a href="/sessions/new">Sign in
-          </a>
-        </div>
-
-        <% end %>
-
-          <div id="add-itinerary">
-          <form action="/trips/new" method="get">
-            <input type="submit" value="Add an Itinerary!">
-          </form>
-        </div>
-
-    </div>
-  </div>
 </div>
-</header>
-
 
 
 <div class="browse_trips">

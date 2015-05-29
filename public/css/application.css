@@ -70,7 +70,13 @@
   background-color: #f6f2f2
 }
 
+.wrapper {}
 
+.nav {
+  height: 60px;
+  background-color: white;
+  /*display: block;*/
+}
 
 
 
@@ -122,6 +128,7 @@
   color: #777;
   text-align: center;
   margin: 2em;
+  position: relative;
 }
 
 /* ---------------------------- */
