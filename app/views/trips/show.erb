@@ -13,27 +13,21 @@
   </ul>
 
 
-  <div id="accordion">
-    <li><% @trip.destinations.each do |destination| %></li>
-    <li>
-      <a href="#trips>"><%= destination.city %>, <%= destination.city %>, <%= destination.days %> days
-      </a>
-    </li>
-
-    <li>Highlights: <%= destination.highlights %></li>
-    <li>Lodging: <%= destination.lodging %></li>
-    <li>Transportation: <%= destination.transportation %></li>
-    <% end %>
-  </ul>
-
-<form action="/trips/<%= @trip.id %>/destinations/new" method="get">
-  <input type="submit" value="Add city!">
-</form>
+<div id="accordion">
+  <% @trip.destinations.each do |destination| %>
+    <h3><%= render_dest_header(destination) %></h3>
+    <div>
+      <p><a href="/trips/<%= @trip.id %>/destinations/<%= destination.id %>">view destination details</a></p>
+      <p>Highlights: <%= destination.highlights %></p>
+      <p>Lodging: <%= destination.lodging %></p>
+      <p>Transportation: <%= destination.transportation %></p>
+      <br>
+    </div>
+  <% end %>
+</div>
 
 <!--http://inspirationalpixels.com/tutorials/creating-an-accordion-with-html-css-jquery-->
 
 <script type="text/javascript">
-  $(document).ready(function() {
-    $('#accordion').accordion();
-  });
+$( "#accordion" ).accordion();
 </script>

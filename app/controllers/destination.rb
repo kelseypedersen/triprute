@@ -21,7 +21,8 @@ post '/trips/:id/destinations' do
 end
 
 get '/trips/:id/destinations/:destination_id' do
-  @trip = Trip.find(params[:id])
-  @destination = Destination.find(params[:destination_id])
+  p params
+  p @trip = Trip.find(params[:id])
+  p @destination = Destination.find(params[:destination_id])
   erb :'trips/show'
 end
