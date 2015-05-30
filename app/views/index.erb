@@ -9,16 +9,11 @@
 
 <div class="main_body">
 
-  <div id="trip_left">
-    "Trip left image"
-  </div>
+  <div class="row">
+    <div class="col-xs-6 col-sm-4" id="card-one">"Trip left image"</div>
+    <div class="col-xs-6 col-sm-4" id="card-two">"trip middle image"</div>
 
-  <div id="trip_middle">
-    "trip middle image"
-  </div>
-
-  <div id="trip_right">
-    "trip right image"
+    <div class="col-xs-6 col-sm-4" id="card-three">"trip right image"</div>
   </div>
 
 </div>
@@ -27,7 +22,11 @@
 
 <div class="second_body">
   <div class="add_trips">
-    Add Your Trip
+    <h1>Add Your Trip<h1>
+      <h3>Share your trip with others or discover your next adventure.</h3>
+      <form action="/trips/new" method="get">
+          <input type="submit" value="GET STARTED">
+      </form>
   </div>
 </div>
 

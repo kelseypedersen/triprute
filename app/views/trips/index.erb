@@ -5,13 +5,11 @@
 
 <div class="trips-body">
 
-<h1> All Trips </h1>
+  <h1> All Trips </h1>
 
-<% @trips.each do |trip| %>
-
+  <% @trips.each do |trip| %>
   <%= erb :"trips/_trips" , locals: {trip: trip} %>
-
-<% end %>
+  <% end %>
 
 </div>
 

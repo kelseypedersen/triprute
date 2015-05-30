@@ -4,6 +4,13 @@ get '/trips' do
   erb :'trips/index'
 end
 
+get '/trips/countries/:country' do
+  country = (params[:country]).gsub("-", " ")
+  @destinations = Destination.where(country: country)
+  erb :'trips/united_states'
+end
+
+
 # Return an HTML form for creating a new trip
 get '/trips/new' do
   erb :'trips/new'
@@ -37,10 +44,6 @@ post '/trips' do
 end
 # Redirects to create a new destination page
 
-get '/trips/:id/favorites' do
-  trip = Trip.find(params[:id])
-  #trip.wishlist.create(value: 1)
-  redirect "/trips"
-end
+
 
 

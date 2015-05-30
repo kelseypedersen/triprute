@@ -1,0 +1,16 @@
+
+  <div class="destination-show">
+    <div id="accordion">
+      <% @destinations.each do |destination| %>
+        <h3><%= render_dest_header(destination) %></h3>
+        <div>
+          <p><a href="/trips/<%= @trip.id %>/destinations/<%= destination.id %>">view destination details</a></p>
+          <p>Highlights: <%= destination.highlights %></p>
+          <p>Lodging: <%= destination.lodging %></p>
+          <p>Transportation: <%= destination.transportation %></p>
+          <br>
+        </div>
+      <% end %>
+    </div>
+  </div>
+

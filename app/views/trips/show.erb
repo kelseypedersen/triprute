@@ -1,35 +1,46 @@
-<a href="/">home</a><br>
+<div class="trip-show">
 
-  <ul id="trip_header">
-    <li><%= @trip.title %></li>
-    <a href='/trips/<%=@trip.id%>/wishlist' class='wishlist button'>Wishlist Button</a>
-    <li>Wishlist: <%= @trip.wishlist %></li>
+    <div class="trip-header-element">
+    <%= @trip.title %>
+  </div>
 
-    <li>Shared by:
-      <a href="/users/<%=@trip.user.id%>"><%= @trip.user.username %></a>
-    </li>
-
-    <li>category: <%= @trip.category %></li>
-    <li>season: <%= @trip.season %></li>
-    <li>comments: <%= @trip.comments %></li>
-  </ul>
-
-
-<div id="accordion">
-  <% @trip.destinations.each do |destination| %>
-    <h3><%= render_dest_header(destination) %></h3>
-    <div>
-      <p><a href="/trips/<%= @trip.id %>/destinations/<%= destination.id %>">view destination details</a></p>
-      <p>Highlights: <%= destination.highlights %></p>
-      <p>Lodging: <%= destination.lodging %></p>
-      <p>Transportation: <%= destination.transportation %></p>
-      <br>
+    <div class="trip-header-element">
+      Shared by: <a href="/users/<%=@trip.user.id%>"><%= @trip.user.first_name %> <%= @trip.user.last_name %></a>
     </div>
-  <% end %>
+
+    <div class="trip-header-element">
+      category: <%= @trip.category %>
+    </div>
+
+    <div class="trip-header-element">
+      season: <%= @trip.season %>
+    </div>
+
+    <div class="trip-header-element">
+      comments: <%= @trip.comments %>
+    </div>
+  </div>
+
+  <div class="destination-show">
+    <div id="accordion">
+      <% @trip.destinations.each do |destination| %>
+        <h3><%= render_dest_header(destination) %></h3>
+        <div>
+          <p><a href="/trips/<%= @trip.id %>/destinations/<%= destination.id %>">view destination details</a></p>
+          <p>Highlights: <%= destination.highlights %></p>
+          <p>Lodging: <%= destination.lodging %></p>
+          <p>Transportation: <%= destination.transportation %></p>
+          <br>
+        </div>
+      <% end %>
+    </div>
+  </div>
 </div>
 
 <!--http://inspirationalpixels.com/tutorials/creating-an-accordion-with-html-css-jquery-->
 
 <script type="text/javascript">
-$( "#accordion" ).accordion();
+$( "#accordion" ).accordion({
+  collapsible: true
+});
 </script>

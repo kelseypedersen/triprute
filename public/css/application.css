@@ -16,6 +16,11 @@
 /* ------->>> GLOBAL <<<------- */
 /* ---------------------------- */
 
+body {
+  padding-left: 5em;
+  padding-right: 5em;
+}
+
 .main_body {
   height: 40em;
   background-color: #f6f2f2;
@@ -29,17 +34,10 @@
   text-align: center;
 }
 
-.nav {
-  display: inline-block;
-  padding: 10px;
-  float: right;
-
-
-}
 
 .header-link {
-  margin: 10px;
   display: inline-block;
+  padding-right: 1.4em;
 }
 
 .search_bar {
@@ -71,23 +69,28 @@
 }
 
 
-.trips-all-header{
+/*.trips-all-header{
   background-color: white;
   height: 4em;
-}
+}*/
 
 .trips-body {
   background-color: #f6f2f2
 }
 
 .wrapper {
+  padding: 10px;
+  background-color: #f6f2f2;
+}
 
+.logo {
+  float: left;
+  display: block;
 }
 
 .nav {
-
-  /*background-color: white;*/
-  /*display: block;*/
+  float: right;
+  display: inline-block;
 }
 
 header {
@@ -133,6 +136,11 @@ header {
   text-align: center;
 }
 
+/* ---------------------------- */
+/* ----->>> SIGNUP PAGE <<<---- */
+/* ---------------------------- */
+
+
 
 
 /* ---------------------------- */
@@ -147,6 +155,13 @@ header {
   position: relative;
 }
 
+.row {
+  text-align: center;
+  padding-top: 5em;
+}
+
+
+
 /* ---------------------------- */
 /* --->>> LISTS <<<--- */
 /* ---------------------------- */
@@ -159,8 +174,14 @@ header {
 /* ------>>> SHOW TRIPS <<<------ */
 /* ---------------------------- */
 
-#trip_header {
-  list-style: none;
+.trip-show {
+position: relative;
+font-size: 1.2em;
+}
+
+.destination-show {
+  margin-bottom: 10em;
+  position: relative;
 }
 
 

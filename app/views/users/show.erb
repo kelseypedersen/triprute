@@ -7,9 +7,9 @@
   <br>
   email: <%=@user.email%><br><br>
 
-  <form class="pure-form pure-form-stacked" method="get" action="/users/<%=@user.id%>/edit">
+<!--   <form class="pure-form pure-form-stacked" method="get" action="/users/<%=@user.id%>/edit">
     <input type="submit" value="edit profile">
-  </form>
+  </form> -->
 
   <% @user.trips.each do |trip| %>
    Trip Title: <a href='/trips/<%=trip.id%>'><%= trip.title %></a><br>
