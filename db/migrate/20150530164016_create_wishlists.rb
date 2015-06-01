@@ -6,6 +6,6 @@ class CreateWishlists < ActiveRecord::Migration
       t.integer :trip_id
 
       t.timestamps
-
+    end
   end
 end
