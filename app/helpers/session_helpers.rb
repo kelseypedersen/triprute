@@ -1,9 +1,6 @@
 helpers do
 
   def login(user)
-    p "*" * 80
-    p user
-    p "*" * 80
     session[:user_id] = user.id
   end
 
@@ -13,9 +10,7 @@ helpers do
 
   def current_user
     @user ||= User.where(id: session[:user_id]).first if session[:user_id]
-    p session[:user_id]
-    p @user
-    @user
+    session[:user_id]
   end
 
   before do
