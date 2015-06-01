@@ -25,7 +25,6 @@ end
 # Displays the specific
 get '/trips/:id' do
   @trip = Trip.find(params[:id])
-  p @trip
   erb :'trips/show'
 end
 
