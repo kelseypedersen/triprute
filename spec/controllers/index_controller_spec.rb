@@ -1,4 +1,4 @@
-require 'spec_helper'
+require_relative '../spec_helper'
 
 describe 'index_controller' do
 
@@ -6,6 +6,11 @@ describe 'index_controller' do
     it "shows the home page" do
       get '/'
       expect(last_response).to be_ok
+    end
+
+    it "returns 200" do
+      get '/'
+      expect(last_response.status).to eq(200)
     end
   end
 
