@@ -27,9 +27,4 @@ helpers do
   end
 end
 
-    #redirect to login page again
-  # def require_unless_logged_in!
-  #   #sinatra check user is signed in before do
-  #   redirect '/users/new' unless user_logged_in?
-  # end
 

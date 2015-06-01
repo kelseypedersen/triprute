@@ -8,7 +8,7 @@ describe 'index_controller' do
       expect(last_response).to be_ok
     end
 
-    it "returns 200" do
+    it "responds with a 200" do
       get '/'
       expect(last_response.status).to eq(200)
     end
