@@ -1,3 +1,6 @@
 class Wishlist < ActiveRecord::Base
-  # Remember to create a migration!
+
+  has_many :trips
+  belongs_to :user
+
 end

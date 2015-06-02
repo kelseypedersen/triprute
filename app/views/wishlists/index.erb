@@ -1,0 +1,6 @@
+  <h1>Wishlists</h1>
+
+  <% @wishlist.trips.each do |trip| %>
+    <a href='/trips/<%=trip.id%>'><%= trip.title %>
+    <br>
+  <% end %>

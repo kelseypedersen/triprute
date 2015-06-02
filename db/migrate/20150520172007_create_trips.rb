@@ -8,7 +8,7 @@ class CreateTrips < ActiveRecord::Migration
       t.binary :photo
 
       t.references :user
-      # t.references :destination
+      t.references :wishlist
 
       t.timestamps
     end

@@ -3,6 +3,7 @@ require 'bcrypt'
 class User < ActiveRecord::Base
 
   has_many :trips
+  has_one :wishlist
 
   include BCrypt
 
