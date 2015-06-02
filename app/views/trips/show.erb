@@ -1,8 +1,23 @@
 <div class="trip-show">
 
     <div class="trip-header-element">
-    <%= @trip.title %>
-  </div>
+      <%= @trip.title %>
+    </div>
+
+
+
+
+
+    <form action="/wishlists" method="post">
+      <button type="button" class="btn btn-default btn-sm">
+        <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span> Favorite!
+      </button>
+     </form>
+
+
+
+
+
 
     <div class="trip-header-element">
       Shared by: <a href="/users/<%=@trip.user.id%>"><%= @trip.user.first_name %> <%= @trip.user.last_name %></a>
